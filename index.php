@@ -1,26 +1,39 @@
+<?php
+
+require_once 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$dsn = "mysql:host=ostrawebb.se;dbname=wsp2526_marpet;charset=utf8";
+$db = new PDO($dsn, $_ENV['DB_USER'], $_ENV['DB_PASS']);
+
+$statement = $db->prepare("SELECT * FROM movies");
+$statement->execute();
+$movies = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>PHP template</title>
-    <link href="css/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
 
-<form action="login.php" method="post">
-    <h2>Logga in</h2>
-    <p>
-        <input type="text" placeholder="Användarnamn" name="user">
-    </p>
-    
-    <p>
-        <input type="password" placeholder="Lösenord" name="pass"><br>
-    </p>
+    <?php
 
-    <p>
-        <input type="submit" value="Logga in">
-    </p>
-</form>
+    foreach ($movies as $movie) {
+        echo '<p>' . $movie['title'] . '</p>';
+    }
+
+    ?>
 
 </body>
+
 </html>
