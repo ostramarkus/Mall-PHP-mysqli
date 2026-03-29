@@ -32,3 +32,6 @@ För att se se ditt webbprojekt behöver du starta PHPs inbyggda webserver:
 ## Spara förändringar
 * Gå in på `Source control` till vänster i mitten. (Ikon med tre cirklar med linjer emellan.)
 * För musen över `Changes` och tryck på pluset: +.
+* Skriv ett meddelande som kortfattat beskriver de ändringar du gjort.
+* Tryck på ```✓ Commit```
+* Tryck på ```Sync```
