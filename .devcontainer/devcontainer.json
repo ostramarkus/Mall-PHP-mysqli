@@ -1,21 +1,14 @@
 {
-  "name": "PHP undervisning",
+  "name": "PHP Development",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "forwardPorts": [
-    8000
-  ],
   "customizations": {
     "vscode": {
       "extensions": [
-        "bmewburn.vscode-intelephense-client",
-        "xdebug.php-pack"
-      ],
-      "settings": {
-        "editor.formatOnSave": true
-      }
+        "xdebug.php-debug",
+        "bmewburn.vscode-intelephense-client"
+      ]
     }
-  },
-  "postCreateCommand": "php -m | grep -q pdo_mysql && echo 'pdo_mysql already installed' || (echo 'pdo_mysql missing' && false) && php -v && composer --version"
+  }
 }
