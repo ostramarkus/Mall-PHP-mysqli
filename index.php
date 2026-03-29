@@ -1,16 +1,23 @@
 <?php
 
+// Load installed packages
 require_once 'vendor/autoload.php';
 
+// Load secrets from the file .env
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$dsn = "mysql:host=ostrawebb.se;dbname=wsp2526_marpet;charset=utf8";
-$db = new PDO($dsn, $_ENV['DB_USER'], $_ENV['DB_PASS']);
+// Connect to database
+$mysqli = new mysqli(
+    'ostrawebb.se', 
+    $_ENV['DB_USER'], 
+    $_ENV['DB_PASS'],
+    $_ENV['DB_USER']
+);
 
-$statement = $db->prepare("SELECT * FROM movies");
-$statement->execute();
-$movies = $statement->fetchAll(PDO::FETCH_ASSOC);
+// Get all movies
+$result = $mysqli->query("SELECT * FROM movies");
+$movies = $result->fetch_all(MYSQLI_ASSOC);
 
 ?>
 
