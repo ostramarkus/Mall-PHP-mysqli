@@ -1,4 +1,4 @@
-# PHP-mall
+# Mall för PHP och MySQL
 I denna mall är följande förinstallerat:
 * PHP
 * mysqli-tillägget till PHP
@@ -6,7 +6,7 @@ I denna mall är följande förinstallerat:
 * Composer för att installera externa PHP-paket
 * Paketet `phpdotenv` för att läsa in hemliga värden till miljö-variabler (environmental variables). Detta för att på ett säkrare sätt lagra känslig data som lösenord. 
 
-## För att använda denna mall: 
+## Använda mallen 
 * Välj `Use this template` uppe till höger. Välj `Create new repository`.
 * Ge ditt projekt ett passande namn. (Inga mellanslag eller internationella tecken är tillåtna.)
 * Välj ´Create repository´ för att skapa projektet.
@@ -31,7 +31,7 @@ För att se se ditt webbprojekt behöver du starta PHPs inbyggda webserver:
 
 ## Spara förändringar
 * Gå in på `Source control` till vänster i mitten. (Ikon med tre cirklar med linjer emellan.)
-* För musen över `Changes` och tryck på pluset: +.
+* För musen över `Changes` och tryck på pluset: `+`.
 * Skriv ett meddelande som kortfattat beskriver de ändringar du gjort.
 * Tryck på ```✓ Commit```
-* Tryck på ```Sync```
+* Tryck på ```Sync Changes```
