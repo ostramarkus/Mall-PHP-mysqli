@@ -9,10 +9,10 @@ I denna mall är följande förinstallerat:
 ## Använda mallen 
 * Välj `Use this template` uppe till höger. Välj `Create new repository`.
 * Ge ditt projekt ett passande namn. (Inga mellanslag eller internationella tecken är tillåtna.)
-* Välj ´Create repository´ för att skapa projektet.
+* Välj `Create repository` för att skapa projektet.
 
 ## Börja koda på ditt projekt
-* Välj `Code` → `Codespaces` → `Create codespace on mail`
+* Välj `Code` → `Codespaces` → `Create codespace on main`
 * Vänta medan den virtuella utvecklingsmiljön startar igång.
 * I terminalfönstret i nederkant kör kommandot `composer install`. Detta installerar de externa kodbibliotek som används av projektet.
 
